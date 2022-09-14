@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.5",
+    "dotenv": "^16.0.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "inquirer": "^9.1.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.6"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "book-nook",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demivlkv/book-nook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/demivlkv/book-nook/issues"
+  },
+  "homepage": "https://github.com/demivlkv/book-nook#readme"
+}
