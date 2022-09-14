@@ -14,7 +14,7 @@
 - [Contributors](#contributors)
 
 ## Contributors
-Boris Habimana - [Borishabimana773](https://github.com/Borishabimana773)
-Demi Hayashi - [demivlkv](https://github.com/demivlkv)
-Sam Karpovck - [samkarp700](https://github.com/samkarp700)
+Boris Habimana - [Borishabimana773](https://github.com/Borishabimana773)<br />
+Demi Hayashi - [demivlkv](https://github.com/demivlkv)<br />
+Sam Karpovck - [samkarp700](https://github.com/samkarp700)<br />
 Mary Paul - [marymc13](https://github.com/marymc13)
