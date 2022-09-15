@@ -2,8 +2,8 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 // GET request for all /api/users
-router.get('/', (req, res) => {});
-User.findAll({
+router.get('/', (req, res) => {
+  User.findAll({
     attributes: { exclude: ['password'] }
 })
     .then(dbUserData => res.json(dbUserData))
@@ -11,14 +11,17 @@ User.findAll({
       console.log(err);
       res.status(500).json(err);
     });
+});
+
 
 // GET request /api/users/# by id
-router.get('/:id', (req, res) => {});
-User.findOne({
+router.get('/:id', (req, res) => {
+  User.findOne({
     attributes: { exclude: ['password'] },
     where: {
       id: req.params.id
     }
+    //insert models here 
   })
     .then(dbUserData => {
       if (!dbUserData) {
@@ -31,10 +34,12 @@ User.findOne({
       console.log(err);
       res.status(500).json(err);
     });
+});
+
 
 // POST request to create new user
-router.post('/', (req, res) => {});
-User.create({
+router.post('/', (req, res) => {
+  User.create({
     username: req.body.username,
     password: req.body.password
   })
@@ -43,6 +48,8 @@ User.create({
       console.log(err);
       res.status(500).json(err);
     });
+});
+
 
 // login route for authentication
     router.post('/login', (req, res) => {
@@ -65,8 +72,8 @@ User.create({
       })  
 
 // PUT request to update user
-router.put('/:id', (req, res) => {});
-User.update(req.body, {
+router.put('/:id', (req, res) => {
+  User.update(req.body, {
     individualHooks: true,
     where: {
       id: req.params.id
@@ -83,9 +90,11 @@ User.update(req.body, {
       console.log(err);
       res.status(500).json(err);
     });
+});
+
 // DELETE request for user /api/users/#
-router.delete('/:id', (req, res) => {});
-User.destroy({
+router.delete('/:id', (req, res) => {
+  User.destroy({
     where: {
       id: req.params.id
     }
@@ -101,6 +110,8 @@ User.destroy({
       console.log(err);
       res.status(500).json(err);
     });
+});
+
 
 // destroy user session
 
