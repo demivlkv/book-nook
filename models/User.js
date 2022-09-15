@@ -1,6 +1,7 @@
 // create User Model
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../conf/connection");
+const bcrypt = require('bcrypt');
+const sequelize = require("../config/connection");
 
 class User extends Model {
   // set up method to run on instance data (per user) to check password
