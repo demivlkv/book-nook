@@ -24,6 +24,8 @@ const sess = {
     })
 };
 
+// app.get('/', (req, res) => )
+
 app.use(session(sess));
 
 const hbs = exphbs.create({ helpers });
