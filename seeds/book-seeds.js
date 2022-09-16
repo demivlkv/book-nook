@@ -3,6 +3,7 @@ const { Post } = require('../models');
 const postData = [
     {
         title: 
+        author: 
         lexile_level:
         genre: 
         description:
