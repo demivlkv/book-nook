@@ -82,26 +82,26 @@ passport.use(new localStrategy(function (username, password, done) {
 
 
 
-// passport.use(new localStrategy (
-//     function(username, password, done) {
-//         db.User.findAll({ where: { Username: username}})
-//         .then(users => {
-//             if(users.length === 0) {
-//                 return done(null, false);
-//             }
-//             //wrong pswrd
-//             if(users[0].Password !== password) {
-//                 return done(null, false);
-//             }
+//  passport.use(new localStrategy (
+//      function(username, password, done) {
+//          db.User.findAll({ where: { Username: username}})
+//              .then(users => {
+//              if(users.length === 0) {
+//                  return done(null, false);
+//              }
+//              //wrong pswrd
+//              if(users[0].Password !== password) {
+//                  return done(null, false);
+//              }
 
-//             //correct password
-//             return done(null, users[0].dataValues);
-//         })
-//         .catch(err => {
-//             return done(err);
-//         });
-//     }
-// ));
+//              //correct password
+//              return done(null, users[0].dataValues);
+//          })
+//          .catch(err => {
+//              return done(err);
+//          });
+//      }
+//  ));
 
 //passport.js
 app.use(passport.initialize());

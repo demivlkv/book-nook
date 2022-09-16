@@ -52,55 +52,57 @@ router.get('/:id', (req, res) => {
 });
 
 
-// // POST request to create new user
-// router.post('/', (req, res) => {
-//   User.create({
-//     username: req.body.username,
-//     password: req.body.password
-//   })
-//     .then(dbUserData => res.json(dbUserData))
-//     .catch(err => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// });
+// POST request to create new user
+router.post('/', (req, res) => {
+  User.create({
+    username: req.body.username,
+    password: req.body.password
+  })
+    .then(dbUserData => res.json(dbUserData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 
 // login route for authentication
   router.post('/login', 
   passport.authenticate('local', 
-  {successRedirect: '/',
+  {successRedirect: '/dashboard',
   failureRedirect: '/login?error=true' }), 
   function(req, res) {
-    res.redirect('/');
+    res.redirect('/dashboard');
   });
+
   router.get('/signup', (req, res) => {
     res.render('signup');
   });
+
   router.post('/signup', (req, res) => {
     db.User.create(req.body)
-    .then(_ => res.redirect('/login'))
+    .then(_ => res.redirect('/dashboard'))
     .catch(err => res.redirect('/signup'))
   })
 
-    // router.post('/login', (req, res) => {
-    //     User.findOne({
-    //         where: {
-    //           username: req.body.username
-    //         }
-    //       }).then(dbUserData => {
-    //         if (!dbUserData) {
-    //           res.status(400).json({ message: 'No user with that username!' });
-    //           return;
-    //         }
-    //         const validPassword = dbUserData.checkPassword(req.body.password);
-    // if (!validPassword) {
-    //   res.status(400).json({ message: 'Incorrect password!' });
-    //   return;
-    // }
-    //         res.json({ user: dbUserData });
-    //       });
-    //   })  
+    router.post('/login', (req, res) => {
+        User.findOne({
+            where: {
+              username: req.body.username
+            }
+          }).then(dbUserData => {
+            if (!dbUserData) {
+              res.status(400).json({ message: 'No user with that username!' });
+              return;
+            }
+            const validPassword = dbUserData.checkPassword(req.body.password);
+    if (!validPassword) {
+      res.status(400).json({ message: 'Incorrect password!' });
+      return;
+    }
+            res.json({ user: dbUserData });
+          });
+      })  
 
 // PUT request to update user
 router.put('/:id', (req, res) => {
