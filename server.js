@@ -81,6 +81,8 @@ passport.use(new localStrategy(function (username, password, done) {
 }));
 
 
+
+
 // passport.use(new localStrategy (
 //     function(username, password, done) {
 //         db.User.findAll({ where: { Username: username}})
