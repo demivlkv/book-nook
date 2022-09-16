@@ -17,7 +17,7 @@
     "start": "node server.js"
   },
   "name": "book-nook",
-  "description": "# REMEMBER!!!!!",
+  "description": "# Book Nook",
   "version": "1.0.0",
   "main": "server.js",
   "repository": {
