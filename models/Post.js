@@ -19,7 +19,19 @@ Post.init(
         title: {
             type: DataTypes.STRING, 
             allowNull: false
-        }, 
+        },
+        author: {
+            type: DataTypes.STRING, 
+            allowNull: false
+        },
+        lexile_level: {
+            type: DataTypes.INTEGER, 
+            allowNull: false
+        },
+        genre: {
+            type: DataTypes.TEXT, 
+            allowNull: false
+        },
         post_text: {
             type: DataTypes.TEXT, 
             allowNull: false,
@@ -42,7 +54,5 @@ Post.init(
         modelName: 'post'
     }
 );
-
-
 
 module.exports = Post;

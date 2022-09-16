@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     Post.findAll({
         //query config
         order: [['created_at', 'DESC']],
-        attributes: ['id', 'post_text', 'title', 'created_at'],
+        attributes: ['id', 'title', 'author', 'lexile_level', 'genre', 'post_text', 'created_at'],
         include: [
             {
                 model: Comment, 
@@ -35,7 +35,7 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         }, 
-        attributes: ['id', 'post_text', 'title', 'created_at'],
+        attributes: ['id', 'title', 'author', 'lexile_level', 'genre', 'post_text', 'created_at'],
         include: [
             {
                 model: Comment, 

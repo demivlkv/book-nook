@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { application } = require('express');
 const { User, Post, Comment } = require('../../models');
 const passport = require('passport');
 
@@ -26,7 +25,7 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Post, 
-        attributes: ['id', 'title', 'post_text', 'created_at']
+        attributes: ['id', 'title', 'author', 'lexile_level', 'genre', 'post_text', 'created_at']
       }, 
       //comment block
       {
@@ -75,13 +74,13 @@ router.get('/:id', (req, res) => {
   function(req, res) {
     res.redirect('/');
   });
-  router.get('/register', (req, res) => {
-    res.render('register');
+  router.get('/signup', (req, res) => {
+    res.render('signup');
   });
-  router.post('/register', (req, res) => {
+  router.post('/signup', (req, res) => {
     db.User.create(req.body)
     .then(_ => res.redirect('/login'))
-    .catch(err => res.redirect('/register'))
+    .catch(err => res.redirect('/signup'))
   })
 
     // router.post('/login', (req, res) => {

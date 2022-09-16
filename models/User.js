@@ -4,17 +4,16 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
 
-// class User extends Model {
+ class User extends Model {}
 //   // set up method to run on instance data (per user) to check password
 //   checkPassword(loginPw) {
 //     return bcrypt.compareSynch(loginPw.this.password);
 //   }
 // }
 
-const User = sequelize.define(
-  "User",
+User.init (
   {
-    UserId: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -33,7 +32,11 @@ const User = sequelize.define(
     },
   
   {
-    timestamp: false,
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "user"
   }
 );
 //     hooks: {
@@ -51,12 +54,6 @@ const User = sequelize.define(
 //         return updatedUserData;
 //       },
 //     },
-//     sequelize,
-//     timestamps: false,
-//     freezeTableName: true,
-//     underscored: true,
-//     modelName: "user",
-//   }
 // );
 
 module.exports = User;
