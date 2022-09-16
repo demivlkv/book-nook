@@ -12,8 +12,7 @@ const bcrypt = require('bcrypt');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
-const { createBrotliCompress } = require('zlib');
-const { User } = require('./models');
+// const User = require('./models');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
