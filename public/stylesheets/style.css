@@ -1,15 +1,24 @@
+:root {
+    --first: #345995;
+    --second: #333;
+    --third: #03cea4;
+    --fourth: #027bce;
+    --fifth: #fff;
+    --sixth: #f3f3f3;
+}
+
 html {
     height: 100%;
     font-family: 'Karla', Helvetica, sans-serif;
     font-size: 1em;
     font-weight: 400;
-    color: #333;
+    color: var(--second);
     line-height: 1.8em;
 }
 
 body {
     background-attachment: fixed;
-    background-image: url('./assets/bg.png');
+    background-image: url('./images/bg.png');
     background-repeat: repeat-x;
     background-color: #fafbfd;
 }
@@ -17,18 +26,18 @@ body {
 h1 {
     font-family: 'Poppins', Helvetica, sans-serif;
     font-weight: 400;
-    color: #345995;
+    color: var(--first);
     text-shadow: 0 0 8px rgba(200, 200, 200, 0.5);
 }
 
 h2 {
     font-family: 'Poppins', Helvetica, sans-serif;
     font-weight: 400;
-    color: #345995;
+    color: var(--first);
 }
 
 span {
-    color: #03cea4;
+    color: var(--third);
 }
 
 p {
@@ -36,13 +45,13 @@ p {
 }
 
 a, a:visited {
-    color: #027bce;
+    color: var(--fourth);
     text-decoration: none;
     transition: all .15s ease-in-out;
 }
 
 a:hover {
-    color: #03cea4;
+    color: var(--third);
     text-decoration: none;
 }
 
@@ -55,13 +64,13 @@ a:hover {
 
 .wrapper {
     height: 100%;
-    background-image: url('./assets/welcome-page.png');
+    background-image: url('./images/welcome-page.png');
     background-repeat: no-repeat;
     background-position: -25px 0;
     background-size: 110%;
     padding: 15px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: var(--fifth);
+    border: 1px solid var(--sixth);
     border-radius: 5px;
 }
 
@@ -78,24 +87,23 @@ a:hover {
 
 div.welcome-text {
     padding: 30px 50px 0 50px;
-    color: #333;
+    color: var(--second);
     font-size: 1.2em;
     line-height: 2em;
 }
 
-.signup a,
-section.add-post a:visited {
+.signup a, .signup a:visited {
     padding: 12px 30px;
-    background-color: #03cea4 !important;
-    color: #fff !important;
+    background-color: var(--third) !important;
+    color: var(--fifth) !important;
     letter-spacing: 1px;
     text-transform: uppercase;
     border-radius: 3px;
 }
     
 .signup a:hover {
-    background-color: #027bce !important;
-    color: #fff !important;
+    background-color: var(--fourth) !important;
+    color: var(--fifth) !important;
 }
 
 form {
@@ -106,14 +114,14 @@ form {
 
 .btn#login, .btn#signup {
     margin-bottom: 15px;
-    background-color: #03cea4;
+    background-color: var(--third);
     text-transform: uppercase;
     letter-spacing: 3px;
-    border: #03cea4;
+    border: var(--third);
 }
 
 .btn#login:hover, .btn#signup:hover {
-    background-color: #345995;
+    background-color: var(--first);
 }
 
 /* DASHBOARD */
@@ -141,13 +149,13 @@ nav ul li {
     margin: 0;
     padding: 0;
     background-color: transparent;
-    color: #027bce;
+    color: var(--fourth);
     border: 0px;
 }
 
 .btn-no-style:hover {
     background-color: transparent;
-    color: #03cea4;
+    color: var(--third);
     cursor: pointer;
 }
 
@@ -159,24 +167,29 @@ section.add-post {
     text-align: center;
 }
 
-section.add-post a,
-section.add-post a:visited {
+section.add-post a, section.add-post a:visited {
     padding: 12px 15px;
-    color: #027bce !important;
-    border: 2px solid #027bce;
+    color: var(--fourth) !important;
+    border: 2px solid var(--fourth);
     border-radius: 3px;
 }
     
 section.add-post a:hover {
-    color: #03cea4 !important;
-    border: 2px solid #03cea4;
+    color: var(--third) !important;
+    border: 2px solid var(--third);
 }
 
 article.post {
     margin-bottom: 15px;
     padding: 15px;
-    background-color: #f3f3f3;
+    background-color: var(--sixth);
     border-radius: 5px;
+}
+
+article div.title {
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: 400;
 }
 
 .meta {
@@ -199,17 +212,26 @@ ol {
     margin: 15px auto;
     padding: 12px;
     border-radius: 3px;
-    background-color: #03cea4;
-    color: #fff !important;
+    background-color: var(--third);
+    color: var(--fifth) !important;
 }
 
 .edit-link:hover  {
-    background-color: #345995;
+    background-color: var(--first);
     cursor: pointer;
 }
 
 .edit-link span {
-    color: #fff;
+    color: var(--fifth);
+}
+
+/* COMMENTS */
+
+div.comments {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
 }
 
 /* FOOTER */

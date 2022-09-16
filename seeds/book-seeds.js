@@ -41,7 +41,41 @@ const postData = [
 }, 
 
 //4th grade - Demi
-
+{
+    title: 'Because of Winn-Dixie',
+    author: 'Kate DiCamillo', 
+    lexile_level: 610,
+    genre: "Children's literature",
+    description: "One summer’s day, ten-year-old India Opal Buloni goes down to the local supermarket for some groceries – and comes home with a dog. But Winn-Dixie is no ordinary dog. It’s because of Winn-Dixie that Opal begins to make friends. And it’s because of Winn-Dixie that she finally dares to ask her father about her mother, who left when Opal was three. In fact, as Opal admits, just about everything that happens that summer is because of Winn-Dixie."
+},
+{
+    title: 'Where the Sidewalk Ends',
+    author: 'Shel Silverstein', 
+    lexile_level: 771,
+    genre: "Children's literature, Poetry",
+    description: "You'll meet a boy who turns into a TV set, and a girl who eats a whale. The Unicorn and the Bloath live there, and so does Sarah Cynthia Sylvia Stout who will not take the garbage out. It is a place where you wash your shadow and plant diamond gardens, a place where shoes fly, sisters are auctioned off, and crocodiles go to the dentist. Shel Silverstein's masterful collection of poems and drawings stretches the bounds of imagination and will be cherished by readers of all ages. This is a collection that belongs on everyone's bookshelf. Makes a great gift for special occasions such as holidays, birthdays, and graduation."
+},
+{
+    title: 'Little House on the Prarie',
+    author: 'Laura Ingalls Wilder', 
+    lexile_level: 760,
+    genre: "Children's literature, Western",
+    description: "Laura Ingalls and her family are heading to Kansas! Leaving behind their home in the Big Woods of Wisconsin, they travel by covered wagon until they find the perfect spot to build a little house on the prairie. Laura and her sister Mary love exploring the rolling hills around their new home, but the family must soon get to work, farming and hunting and gathering food for themselves and for their livestock. Just when the Ingalls family starts to settle into their new home, they find themselves caught in the middle of a conflict. Will they have to move again?"
+},
+{
+    title: 'Matilda',
+    author: 'Roald Dahl', 
+    lexile_level: 840,
+    genre: "Children's literature, Humor, Fantasy",
+    description: "Matilda is a sweet, exceptional young girl, but her parents think she's just a nuisance. She expects school to be different but there she has to face Miss Trunchbull, a kid-hating terror of a headmistress. When Matilda is attacked by the Trunchbull she suddenly discovers she has a remarkable power with which to fight back. It'll take a superhuman genius to give Miss Trunchbull what she deserves and Matilda may be just the one to do it!"
+},
+{
+    title: 'Charlie and the Chocolate Factory',
+    author: 'Roald Dahl', 
+    lexile_level: 810,
+    genre: "Children's literature, Fantasy",
+    description: "Willy Wonka's famous chocolate factory is opening at last! But only five lucky children will be allowed inside. And the winners are: Augustus Gloop, an enormously fat boy whose hobby is eating; Veruca Salt, a spoiled-rotten brat whose parents are wrapped around her little finger; Violet Beauregarde, a dim-witted gum-chewer with the fastest jaws around; Mike Teavee, a toy pistol-toting gangster-in-training who is obsessed with television; and Charlie Bucket, Our Hero, a boy who is honest and kind, brave and true, and good and ready for the wildest time of his life!"
+},
 
 //5th grade - Mary
 
