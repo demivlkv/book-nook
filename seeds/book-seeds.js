@@ -78,7 +78,41 @@ const postData = [
 },
 
 //5th grade - Mary
-
+{
+    title: 'The Mysterious Benedict Society',
+    author: 'Trenton Lee Stewart', 
+    lexile_level: 900,
+    genre: "Children's literature, Fantasy",
+    post_text: "Dozens of children respond to this peculiar newspaper ad and are then put through a series of mind-bending tests, which readers take along with them. Only four children—two boys and two girls—succeed. Their challenge: to go on a secret mission that only the most intelligent and inventive children could complete. They will have to go undercover at the Learning Institute for the Very Enlightened, where the only rule is that there are no rules. But what they'll find in the hidden underground tunnels of the school is more than your average school supplies."
+},
+{
+    title: 'Pippi Longstocking',
+    author: 'Astrid Lindgren', 
+    lexile_level: 870,
+    genre: "Children's literature, Fantasy",
+    post_text: "Tommy and his sister Annika have a new neighbor, and her name is Pippi Longstocking. She has crazy red pigtails, no parents to tell her what to do, a horse that lives on her porch, and a pet monkey named Mr. Nilsson. Whether Pippi’s scrubbing her floors, doing arithmetic, or stirring things up at a fancy tea party, her flair for the outrageous always seems to lead to another adventure."
+},
+{
+    title: 'Adventures of Tom Sawyer',
+    author: 'Mark Twain', 
+    lexile_level: 950,
+    genre: "Historical Fiction",
+    post_text: "In this classic boys’ adventure story, Tom Sawyer has a series of adventures from tracking down a murderer to running away and attending his own funeral."
+},
+{
+    title: 'Agony of Alice',
+    author: 'Phyllis Reynolds', 
+    lexile_level: 910,
+    genre: "Realistic Fiction",
+    post_text: "Eleven-year-old, motherless Alice decides she needs a gorgeous role model who does everything right; and when placed in homely Mrs. Plotkin's class she is greatly disappointed until she discovers it's what people are inside that counts."
+},
+{
+    title: 'Birchbark',
+    author: 'Louise Erdich', 
+    lexile_level: 970,
+    genre: "Historical Fiction",
+    post_text: "Omakayas, a seven-year-old Native American girl of the Ojibwa tribe, lives through the joys of summer and the perils of winter on an island in Lake Superior in 1847."
+},
 
 //6th grade - Boris
 
