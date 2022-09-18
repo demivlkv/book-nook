@@ -5,20 +5,18 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const path = require('path');
 const passport = require('passport');
 
-
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 
-
 const app = express();
 const PORT = process.env.PORT || 3001;
-
 
 const sess = {
     secret: process.env.SESSION_SECRET,
     cookie: {
-        // session expires after x minutes
+        // session expires after 30 minutes
+        maxAge: 10 * 180 * 1000
     },
     resave: false,
     saveUninitialized: true,
@@ -28,9 +26,6 @@ const sess = {
 };
 
 app.use(session(sess));
-
-
-
 
 const hbs = exphbs.create({ helpers });
 
@@ -46,7 +41,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(passport.initialize());
 app.use(passport.session());
  
-
 // turn on routes
 app.use(routes);
 
