@@ -250,6 +250,56 @@ div.comments {
     border-radius: 5px;
 }
 
+form {
+    width: 50%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+input {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    background-color: var(--fifth);
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid var(--sixth);
+    border-radius: 3px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    resize: vertical;
+    margin: 8px 0;
+    padding: 10px;
+    background-color: var(--fifth);
+    color: var(--second);
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid var(--sixth);
+    border-radius: 3px;
+}
+
+button {
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px 15px;
+    background-color: var(--third);
+    color: var(--fifth);
+    font-family: inherit;
+    font-size: inherit;
+    text-align: center;
+    border: 0;
+    border-radius: 3px;
+    transition: all .15s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--first);
+    cursor: pointer;
+}
+
 /* FOOTER */
 
 footer {

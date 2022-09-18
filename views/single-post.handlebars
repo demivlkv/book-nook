@@ -1,0 +1,43 @@
+<div class="col-3">
+    <section id="sidebar">
+
+        {{#if posts.length}}
+        <h2>View By Genre</h2>
+        <ol>
+            {{#each posts as |post|}}
+            <li>
+                <a href="/dashboard/edit/{{post.id}}" class="edit-link">{{post.title}} <span>{{format_date post.created_at}}</span></a>
+            </li>
+            {{/each}}
+        </ol>
+        {{/if}}
+
+    </section>
+
+</div>
+<div class="col-9">
+
+    {{> post-info post}}
+
+    {{!-- {{#if loggedIn}} --}}
+    <form class="comment-form">
+        <div>
+            <textarea name="comment-body" placeholder="Add a comment..."></textarea>
+        </div>
+        <div>
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i> Comment</button>
+        </div>
+    </form>
+    {{!-- {{/if}} --}}
+
+    <h2 class="comment">
+        {{post.comments.length}} {{format_plural "comment" post.comments.length}}
+    </h2>
+
+    {{> comments post.comments}}
+
+</div>
+
+{{!-- {{#if loggedIn}} --}}
+{{!-- <script src="/javascript/comment.js"></script>
+{{/if}} --}}
