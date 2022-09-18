@@ -115,7 +115,41 @@ const postData = [
 },
 
 //6th grade - Boris
-
+{
+    title: 'Elijah of Buxton',
+    author: 'Christopher Paul Curtis',
+    lexile_level: 980,
+    genre: "Historical Fiction , Comedie and Humor",
+    post_text: "A tale of eleven-year-old Elijah Freeman. The first child born into freedom in Buxton, Canada, a settlement of runaway slaves just over the border from Detroit, Elijah is best known in his hometown as the boy who threw up on Frederick Douglass. (Not on purpose, of course - he was just a baby then!) But things change when a former slave calling himself the Right Reverend Zephariah W. Connerly the Third steals money from Elijah's friend Mr. Leroy, who has been saving to buy his family out of captivity in the south. Elijah joins Mr. Leroy on a dangerous journey to America in pursuit of the disreputable preacher, and he discovers firsthand the unimaginable horrors of the life his parents fled - a life from which he'll always be free, if he can find the courage to go back home."
+},
+{
+    title: 'The Egypt Game',
+    author: 'Zilpha K Snyder',
+    lexile_level: 1010,
+    genre: "Classics, Mystery  and Suspense",
+    post_text: "The first time Melanie Ross meets April Hall, she's not sure they'll have anything in common. But she soon discovers that they both love anything to do with ancient Egypt. When they stumble upon a deserted storage yard behind the A-Z Antiques and Curio Shop, Melanie and April decide it's the perfect spot for the Egypt Game. Before long there are six Egyptians instead of two. After school and on weekends they all meet to wear costumes, hold ceremonies, and work on their secret code. Everyone thinks it's just a game, until strange things begin happening to the players. Has the Egypt Game gone too far?",
+},
+{
+    title: 'The Petit Prince',
+    author: 'Antoine de Saint Exupery',
+    lexile_level: 710,
+    genre: "Fairy Tales, Folk Tales, Fables, Fantasy",
+    post_text: "This enduring classic tells the story of a nameless little prince from the asteroid known as B-612 who is encountered by an airplane pilot in the Desert of Sahara. The stranded pilot has crashed thousands of miles from human habitation. He must repair his plane before his small supply of water runs out. Amazingly, it is here in the middle of nowhere that the pilot is met by this little boy, dressed in high boots and a long, regal cape and claiming to be a little prince from another world."
+},
+{
+    title: 'The Crossover',
+    author: 'Kwame Alexander',
+    lexile_level: 750,
+    genre: "Realistic Fiction, Young Adult, Poetry, Songs, Verse",
+    post_text: "Josh and his twin brother Jordan are awesome on the court. But Josh has more than basketball in his blood. He's got mad beats too, beats that tell his family's story in verse. But both brothers must come to grips with growing up, on and off the court, as they realize breaking the rules can come at a terrible price, resulting in a game-changer for their entire family. Winner of the 2015 Newbery Medal"
+},
+{
+    title: 'Counting by 7s',
+    author: 'Holly Golberg Sloan',
+    lexile_level: 770,
+    genre: "Realistic Fiction",
+    post_text: "Willow Chance is a 12-year-old genius, obsessed with nature and diagnosing medical conditions, who finds it comforting to count by 7s. It has never been easy for her to connect with anyone other than her adoptive parents, but that hasn't kept her from leading a quietly happy life, until now. Suddenly Willow's world is tragically changed when her parents both die in a car crash, leaving her alone in a baffling world. The triumph of this book is that it is not a tragedy. This extraordinarily odd but extraordinarily endearing girl manages to push through her grief. Her journey to find a fascinatingly diverse and fully believable surrogate family is a joy and a revelation to read."
+},
 ];
 
 const seedBooks = () => Post.bulkCreate(postData);
