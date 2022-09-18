@@ -8,7 +8,7 @@ const postData = [
     author: 'William Steig', 
     lexile_level: 560,
     genre: 'Fiction',
-    post_text:"'Doctor De Soto, the dentist, did very good work.' With the aid of his able assistant, Mrs. De Soto, he copes with the toothaches of animals large and small. His expertise is so great that his fortunate patients never feel any pain. Since he's a mouse, Doctor De Soto refuses to treat 'dangerous' animals--that is, animals who have a taste for mice. But one day a fox shows up and begs for relief from the tooth that's killing him. How can the kindhearted De Sotos turn him away? But how can they make sure that the fox doesn't give in to his baser instincts once his tooth is fixed? Those clever De Sotos will find a way."
+    post_text: "Doctor De Soto, the dentist, did very good work.' With the aid of his able assistant, Mrs. De Soto, he copes with the toothaches of animals large and small. His expertise is so great that his fortunate patients never feel any pain. Since he's a mouse, Doctor De Soto refuses to treat 'dangerous' animals--that is, animals who have a taste for mice. But one day a fox shows up and begs for relief from the tooth that's killing him. How can the kindhearted De Sotos turn him away? But how can they make sure that the fox doesn't give in to his baser instincts once his tooth is fixed? Those clever De Sotos will find a way."
 }, 
 {
     title: 'Weslandia', 

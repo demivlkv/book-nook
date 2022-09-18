@@ -1,10 +1,9 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
-// const withAuth = require('../utils/auth');
-// const isLoggedIn = require('../utils/auth');
+const withAuth = require('../utils/auth');
 
 // render dashboard menu & load user posts if any
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     Post.findAll({
         attributes: [ 'id', 'title', 'author', 'lexile_level', 'genre', 'post_text', 'created_at' ],
         order: [['title', 'ASC']],
@@ -37,7 +36,7 @@ router.get('/', (req, res) => {
 });
 
 // render single post template
-router.get('/post/:id', (req, res) => {
+router.get('/post/:id', withAuth, (req, res) => {
     Post.findOne({
         where: {
             id: req.params.id
