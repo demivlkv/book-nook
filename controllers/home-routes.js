@@ -34,19 +34,11 @@ router.get('/', (req, res) => {
 
 // render login template
 router.get('/login', (req, res) => {
-    // if (req.session.loggedIn) {
-    //     res.render('/dashboard');
-    //     return;
-    // }
     res.render('login');
 });
 
 // render signup template
 router.get('/signup', (req, res) => {
-    // if (req.session.loggedIn) {
-    //     res.render('/dashboard');
-    //     return;
-    // }
     res.render('signup');
 });
 

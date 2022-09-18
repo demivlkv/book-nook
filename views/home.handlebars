@@ -1,19 +1,15 @@
 <div class="col-3">
     <section id="sidebar">
 
-        <h2>View By Genre</h2>
+        <h4>Travel to the stars, Read!</h4>
         <ol>
             {{#each posts as |post|}}
             <li>
-                <a href="/dashboard/edit/{{post.id}}" class="edit-link">{{post.title}} <span>{{format_date post.created_at}}</span></a>
+                <a href="/dashboard/edit/{{post.id}}" class="edit-link">{{post.title}}</a>
             </li>
             {{/each}}
         </ol>
 
-    </section>
-
-    <section class="add-post">
-        <a href="/dashboard/addpost"><i class="fa-solid fa-plus"></i> Create New Post</a>
     </section>
 </div>
 <div class="col-9">

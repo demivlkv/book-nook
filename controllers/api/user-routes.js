@@ -17,7 +17,6 @@ router.get('/', (req, res) => {
     });
 });
 
-
 // GET request /api/users/# by id
 router.get('/:id', (req, res) => {
   User.findOne({
