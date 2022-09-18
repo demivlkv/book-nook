@@ -1,9 +1,12 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
 const passport = require('passport');
+// const isLoggedIn = require('../../utils/auth');
+
 
 // GET request for all /api/users
 router.get('/', (req, res) => {
+  console.log('pikapika')
   User.findAll({
     attributes: { exclude: ['password'] }
 })
@@ -53,7 +56,8 @@ router.get('/:id', (req, res) => {
 
 
 // POST request to create new user
-router.post('/', (req, res) => {
+router.post('/signup', (req, res) => {
+  console.log('charmander')
   User.create({
     username: req.body.username,
     password: req.body.password
@@ -66,31 +70,35 @@ router.post('/', (req, res) => {
 });
 
 
+
 // login route for authentication
-  router.post('/login', 
-  passport.authenticate('local', 
-  {successRedirect: '/dashboard',
-  failureRedirect: '/login?error=true' }), 
-  function(req, res) {
-    res.redirect('/dashboard');
-  });
+  // router.post('/login', 
+  // can use this in other post request ***// passport.authenticate('local', 
+  // // {successRedirect: '/dashboard',
+  // // failureRedirect: '/login?error=true' }), 
+  // function(req, res) {
+  //   res.redirect('/dashboard');
+  // });
 
-  router.get('/signup', (req, res) => {
-    res.render('signup');
-  });
 
-  router.post('/signup', (req, res) => {
-    db.User.create(req.body)
-    .then(_ => res.redirect('/dashboard'))
-    .catch(err => res.redirect('/signup'))
-  })
+  // router.post('/signup', (req, res) => {
+  //   console.log(req.body);
+  //   console.log('squirtle');
+  //   db.User.create(req.body)
+  //   .then( data => {
+  //    console.log(data)
+  //     res.redirect('/dashboard')})
+  //   .catch(err => res.redirect('/signup'))
+  // })
 
     router.post('/login', (req, res) => {
+      console.log('proof')
         User.findOne({
             where: {
               username: req.body.username
             }
           }).then(dbUserData => {
+            
             if (!dbUserData) {
               res.status(400).json({ message: 'No user with that username!' });
               return;
@@ -100,7 +108,10 @@ router.post('/', (req, res) => {
       res.status(400).json({ message: 'Incorrect password!' });
       return;
     }
-            res.json({ user: dbUserData });
+    // req.session.user_id = dbUserData.user.dataValues.id;
+    console.log(dbUserData.user)
+            res.json({user: dbUserData});
+            
           });
       })  
 

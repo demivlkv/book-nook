@@ -3,7 +3,7 @@ const { Post, User, Comment } = require('../models');
 
 // render homepage template
 router.get('/', (req, res) => {
-    console.log(req.session);
+    console.log(req.session, 'try this');
     Post.findAll({
         attributes: [ 'id', 'title', 'author', 'lexile_level', 'genre', 'post_text', 'created_at' ],
         order: [['created_at', 'DESC']],
@@ -34,19 +34,19 @@ router.get('/', (req, res) => {
 
 // render login template
 router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/dashboard');
-        return;
-    }
+    // if (req.session.loggedIn) {
+    //     res.render('/dashboard');
+    //     return;
+    // }
     res.render('login');
 });
 
 // render signup template
 router.get('/signup', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/dashboard');
-        return;
-    }
+    // if (req.session.loggedIn) {
+    //     res.render('/dashboard');
+    //     return;
+    // }
     res.render('signup');
 });
 

@@ -51,60 +51,60 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-passport.serializeUser(function (user, done) {
-    done(null, user.id);
+passport.serializeUser(function (user, cb) {
+    cb(null, user.id);
 });
 
-passport.deserializeUser(function (id, done) {
+passport.deserializeUser(function (id, cb) {
     //set up user model
     db.User.findAll({ where: {UserId: id }})
     .then(users => {
-        done(null, users[0]);
+        cb(null, users[0]);
     })
     .catch(err => done(err))
 });
 
-passport.use(new localStrategy(function (username, password, done) {
-    User.findOne({ username: username}, function (err, user) {
-        if (err) {
-            return done(err);
-        } if (!user) {
-            return done(null, false, { message: 'Incorrect Username.'});
-        }
-        bcrypt.compare(password, user.password, function(err, res){
-            if (err) return done(err);
+// passport.use(new localStrategy(function (username, password, done) {
+//     User.findOne({ username: username}, function (err, user) {
+//         if (err) {
+//             return done(err);
+//         } if (!user) {
+//             return done(null, false, { message: 'Incorrect Username.'});
+//         }
+//         bcrypt.compare(password, user.password, function(err, res){
+//             if (err) return done(err);
 
-            if (res === false) {
-                return done(null, false, { message: 'Incorrect password.'});
-            }
-            return done(null, user);
-        })
-    })
-}));
-
-
+//             if (res === false) {
+//                 return done(null, false, { message: 'Incorrect password.'});
+//             }
+//             return done(null, user);
+//         })
+//     })
+// }));
 
 
-//  passport.use(new localStrategy (
-//      function(username, password, done) {
-//          db.User.findAll({ where: { Username: username}})
-//              .then(users => {
-//              if(users.length === 0) {
-//                  return done(null, false);
-//              }
-//              //wrong pswrd
-//              if(users[0].Password !== password) {
-//                  return done(null, false);
-//              }
 
-//              //correct password
-//              return done(null, users[0].dataValues);
-//          })
-//          .catch(err => {
-//              return done(err);
-//          });
-//      }
-//  ));
+
+ passport.use(new localStrategy (
+     function(username, password, cb) {
+         db.User.findAll({ where: { Username: username}})
+             .then(users => {
+             if(users.length === 0) {
+                 return cb(null, false);
+             }
+             //wrong pswrd
+             if(users[0].Password !== password) {
+                 return cb(null, false);
+             }
+
+             //correct password
+             return cb(null, users[0].dataValues);
+         })
+         .catch(err => {
+             return cb(err);
+         });
+     }
+ ));
 
 //passport.js
 app.use(passport.initialize());
