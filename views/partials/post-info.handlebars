@@ -6,6 +6,6 @@
                 <p>{{post_text}}</p>
 
             <div class="meta">
-                Posted by <i class="fa-solid fa-circle-user"></i> {{user.user_id}} on {{format_date created_at}} | <a href="/dashboard/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+                <i class="fa-solid fa-star"></i> <a href="/dashboard/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
             </div>
         </article>
