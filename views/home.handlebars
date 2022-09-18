@@ -1,4 +1,21 @@
-    <p>lol hi </p>
+    <section id="sidebar">
+
+        <h2>Your Posts</h2>
+        <ol>
+            {{#each posts as |post|}}
+            <li>
+                <a href="/dashboard/edit/{{post.id}}" class="edit-link">{{post.title}} <span>{{format_date post.created_at}}</span></a>
+            </li>
+            {{/each}}
+        </ol>
+
+    </section>
+
+    <section class="add-post">
+        <a href="/dashboard/addpost"><i class="fa-solid fa-plus"></i> Create New Post</a>
+    </section>
+</div>
+<div class="col-9">
     {{#if posts.length}}
     <section class="dashboard">
         
@@ -13,7 +30,3 @@
 
     </section>
     {{/if}}
-
-    <section class="add-post">
-        <a href="/dashboard/addpost"><i class="fa-solid fa-plus"></i> create post</a>
-    </section>
