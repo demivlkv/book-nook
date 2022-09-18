@@ -53,17 +53,11 @@ router.get('/:id', (req, res) => {
             }
         ]
     })
-    .then(dbPostData => {
-        if (!dbPostData) {
-            res.status(404).json({ message: 'No post found with this id '});
-            return;
-        }
-        res.json(dbPostData);
-     })
-     .catch(err => {
+    .then(dbPostData => res.json(dbPostData))
+    .catch(err => {
         console.log(err);
         res.status(500).json(err);
-     });
+     })
 });
 
 // POST request to create a post
