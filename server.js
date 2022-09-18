@@ -11,17 +11,14 @@ const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 
 
-// const { User } = require('./models');
-
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// const dotenv = require('dotenv').config();
+
 const sess = {
     secret: process.env.SESSION_SECRET,
     cookie: {
         // session expires after x minutes
-        
     },
     resave: false,
     saveUninitialized: true,

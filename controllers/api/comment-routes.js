@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
-// const withAuth = require('../../utils/auth');
-// const { isLoggedIn, isLoggedOut } = require('../../utils/auth');
+
 
 // GET request all comments
 router.get('/', (req, res) => {

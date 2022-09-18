@@ -5,7 +5,7 @@ const passport = require('../../config/passport');
 
 // GET request for all /api/users
 router.get('/', (req, res) => {
-  console.log('pikapika')
+  // console.log('pikapika')
   User.findAll({
     attributes: { exclude: ['password'] }
 })
@@ -55,7 +55,7 @@ router.get('/:id', (req, res) => {
 
 // POST request to create new user
 router.post('/signup', (req, res) => {
-  console.log('charmander')
+  // console.log('charmander')
   User.create({
     username: req.body.username,
     password: req.body.password
@@ -76,7 +76,7 @@ router.post('/signup', (req, res) => {
 
 
     router.post('/login', passport.authenticate('local'), (req, res) => {
-      console.log('proof')
+      // console.log('proof')
         User.findOne({
             where: {
               username: req.body.username
