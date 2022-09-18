@@ -156,7 +156,4 @@ router.delete('/:id', (req, res) => {
     });
 });
 
-
-// destroy user session
-
 module.exports = router;

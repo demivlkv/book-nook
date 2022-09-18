@@ -5,8 +5,6 @@ const { Post, User, Comment } = require('../models');
 
 // render dashboard menu & load user posts if any
 router.get('/', (req, res) => {
-    console.log('dashboard');
-    console.log(req.session.user.id);
     Post.findAll({
         attributes: [ 'id', 'title', 'author', 'lexile_level', 'genre', 'post_text', 'created_at' ],
         order: [['title', 'ASC']],
