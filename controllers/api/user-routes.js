@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
+const passport = require('../../config/passport');
 
 
 // GET request for all /api/users
@@ -74,33 +75,22 @@ router.post('/signup', (req, res) => {
 });
 
 
-    router.post('/login', (req, res) => {
+    router.post('/login', passport.authenticate('local'), (req, res) => {
       console.log('proof')
         User.findOne({
             where: {
               username: req.body.username
             }
           }).then(dbUserData => {
-            
-            if (!dbUserData) {
-              res.status(400).json({ message: 'No user with that username!' });
-              return;
-            }
-            const validPassword = dbUserData.checkPassword(req.body.password);
-    if (!validPassword) {
-      res.status(400).json({ message: 'Incorrect password!' });
-      return;
-    }
+    
     req.session.save(() => {
       req.session.user = dbUserData;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
-    // const test = ([dbUserData]).map(x => x)
-    // console.log(JSON.stringify(dbUserData).split('id:').split(" ")[1]);
-      res.json({user: dbUserData});
-    });
-          });
-      })  
+      res.json(req.user);
+    })
+    });  
+  });
 
 
 router.post('/logout', (req, res) => {

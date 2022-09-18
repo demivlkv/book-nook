@@ -1,10 +1,9 @@
-// if (process.env.NODE_ENV !== 'production') { require('dotenv').config() };
 const express = require('express');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const path = require('path');
-
+const passport = require('passport');
 
 
 const routes = require('./controllers');
@@ -31,10 +30,10 @@ const sess = {
     })
 };
 
-
-
-
 app.use(session(sess));
+
+
+
 
 const hbs = exphbs.create({ helpers });
 
@@ -46,9 +45,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+//passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
  
-
 
 // turn on routes
 app.use(routes);
