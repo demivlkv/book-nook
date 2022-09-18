@@ -8,10 +8,6 @@ router.get('/', (req, res) => {
     console.log('dashboard');
     console.log(req.session.user.id);
     Post.findAll({
-        // where: {
-        //     // use the id from the session
-        //     user_id: req.session.user.id
-        // },
         attributes: [ 'id', 'title', 'author', 'lexile_level', 'genre', 'post_text', 'created_at' ],
         order: [['created_at', 'DESC']],
         include: [
