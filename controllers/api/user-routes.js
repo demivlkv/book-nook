@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
 const passport = require('../../config/passport');
 
-
 // GET request for all /api/users
 router.get('/', (req, res) => {
   console.log('pikapika')
@@ -60,49 +59,48 @@ router.post('/signup', (req, res) => {
     username: req.body.username,
     password: req.body.password
   })
-    .then(dbUserData => {
-      req.session.save(() => {
-        req.session.user = dbUserData;
-        req.session.username = dbUserData.username;
-        req.session.loggedIn = true;
-    
-      res.json(dbUserData)});
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+  .then(dbUserData => {
+    req.session.save(() => {
+      req.session.user = dbUserData;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
+  
+    res.json(dbUserData)});
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 
-    router.post('/login', passport.authenticate('local'), (req, res) => {
-      console.log('proof')
-        User.findOne({
-            where: {
-              username: req.body.username
-            }
-          }).then(dbUserData => {
-    
+router.post('/login', passport.authenticate('local'), (req, res) => {
+  console.log('proof')
+  User.findOne({
+    where: {
+      username: req.body.username
+    }
+  }).then(dbUserData => {
+
     req.session.save(() => {
       req.session.user = dbUserData;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
       res.json(req.user);
     })
-    });  
-  });
+  });  
+});
 
 
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
-  req.session.destroy(() => {
-  res.status(204).end();
+    req.session.destroy(() => {
+    res.status(204).end();
   });
   } else {
-          res.status(404).end();
-        }
-      });
-
+    res.status(404).end();
+  }
+});
 
 // PUT request to update user
 router.put('/:id', (req, res) => {

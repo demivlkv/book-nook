@@ -5,18 +5,13 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const path = require('path');
 const passport = require('passport');
 
-
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 
-
-// const { User } = require('./models');
-
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// const dotenv = require('dotenv').config();
 const sess = {
     secret: process.env.SESSION_SECRET,
     cookie: {
@@ -32,9 +27,6 @@ const sess = {
 
 app.use(session(sess));
 
-
-
-
 const hbs = exphbs.create({ helpers });
 
 //middleware
@@ -49,7 +41,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(passport.initialize());
 app.use(passport.session());
  
-
 // turn on routes
 app.use(routes);
 
