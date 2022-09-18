@@ -1,6 +1,10 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
+<<<<<<< HEAD
+
+=======
 const withAuth = require('../utils/auth');
+>>>>>>> 83c62fa2d702c97804c42747deb08b749b5415ae
 
 // render dashboard menu & load user posts if any
 router.get('/', withAuth, (req, res) => {
