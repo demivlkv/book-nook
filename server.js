@@ -4,15 +4,12 @@ const exphbs = require('express-handlebars');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const path = require('path');
-const passport = require('passport');
-const localStrategy = require('passport-local').Strategy;
-const bcrypt = require('bcrypt');
+
 
 
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
-
 
 
 // const { User } = require('./models');
@@ -50,65 +47,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+ 
 
-passport.serializeUser(function (user, cb) {
-    cb(null, user.id);
-});
-
-passport.deserializeUser(function (id, cb) {
-    //set up user model
-    db.User.findAll({ where: {UserId: id }})
-    .then(users => {
-        cb(null, users[0]);
-    })
-    .catch(err => done(err))
-});
-
-// passport.use(new localStrategy(function (username, password, done) {
-//     User.findOne({ username: username}, function (err, user) {
-//         if (err) {
-//             return done(err);
-//         } if (!user) {
-//             return done(null, false, { message: 'Incorrect Username.'});
-//         }
-//         bcrypt.compare(password, user.password, function(err, res){
-//             if (err) return done(err);
-
-//             if (res === false) {
-//                 return done(null, false, { message: 'Incorrect password.'});
-//             }
-//             return done(null, user);
-//         })
-//     })
-// }));
-
-
-
-
- passport.use(new localStrategy (
-     function(username, password, cb) {
-         db.User.findAll({ where: { Username: username}})
-             .then(users => {
-             if(users.length === 0) {
-                 return cb(null, false);
-             }
-             //wrong pswrd
-             if(users[0].Password !== password) {
-                 return cb(null, false);
-             }
-
-             //correct password
-             return cb(null, users[0].dataValues);
-         })
-         .catch(err => {
-             return cb(err);
-         });
-     }
- ));
-
-//passport.js
-app.use(passport.initialize());
-app.use(passport.session());
 
 // turn on routes
 app.use(routes);

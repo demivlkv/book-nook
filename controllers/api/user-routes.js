@@ -1,7 +1,5 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
-const passport = require('passport');
-// const isLoggedIn = require('../../utils/auth');
 
 
 // GET request for all /api/users
@@ -76,27 +74,6 @@ router.post('/signup', (req, res) => {
 });
 
 
-
-// login route for authentication
-  // router.post('/login', 
-  // can use this in other post request ***// passport.authenticate('local', 
-  // // {successRedirect: '/dashboard',
-  // // failureRedirect: '/login?error=true' }), 
-  // function(req, res) {
-  //   res.redirect('/dashboard');
-  // });
-
-
-  // router.post('/signup', (req, res) => {
-  //   console.log(req.body);
-  //   console.log('squirtle');
-  //   db.User.create(req.body)
-  //   .then( data => {
-  //    console.log(data)
-  //     res.redirect('/dashboard')})
-  //   .catch(err => res.redirect('/signup'))
-  // })
-
     router.post('/login', (req, res) => {
       console.log('proof')
         User.findOne({
@@ -124,6 +101,8 @@ router.post('/signup', (req, res) => {
     });
           });
       })  
+
+
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
   req.session.destroy(() => {
