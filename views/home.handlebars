@@ -1,8 +1,7 @@
-    <p>lol hi </p>
-    {{#if posts.length}}
-    <section class="dashboard">
-        
-        <h2>Your Posts</h2>
+<div class="col-3">
+    <section id="sidebar">
+
+        <h2>View By Genre</h2>
         <ol>
             {{#each posts as |post|}}
             <li>
@@ -12,8 +11,17 @@
         </ol>
 
     </section>
-    {{/if}}
 
     <section class="add-post">
-        <a href="/dashboard/addpost"><i class="fa-solid fa-plus"></i> create post</a>
+        <a href="/dashboard/addpost"><i class="fa-solid fa-plus"></i> Create New Post</a>
     </section>
+</div>
+<div class="col-9">
+    <ol>
+        {{#each posts as |post|}}
+        <li class="list-group-item">
+            {{> post-info post}}
+        </li>
+        {{/each}}
+    </ol>
+</div>

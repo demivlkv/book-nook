@@ -204,6 +204,22 @@ ol {
     padding-inline-start: 0 !important;
 }
 
+li.list-group-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0 !important;
+    background-color: transparent;
+    border: 0 !important;
+}
+
+li.list-group-item:last-child {
+    margin: 0;
+    padding: 0 !important;
+    background-color: transparent;
+    border: 0 !important;
+}
+
 .edit-link {
     width: 100%;
     display: flex;

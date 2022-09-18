@@ -1,9 +1,7 @@
 // any formatting functions here
 module.exports = {
     format_date: date => {
-        return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/$${new Date (
-            date
-        ).getFullYear()}`;
+        return `${new Date(date).toLocaleDateString('en-US', { timeZone: 'America/New_York'})}`;
     }, 
     format_plural: (word, amount) => {
         if (amount !== 1) {

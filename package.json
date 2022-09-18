@@ -1,12 +1,12 @@
 {
-  "scripts": {
-    "start": "node server.js",
-    "seed": "node seeds/index.js"
-  },
   "name": "book-nook",
   "description": "# Book Nook",
   "version": "1.0.0",
   "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/demivlkv/book-nook.git"
