@@ -109,7 +109,7 @@ router.post('/signup', (req, res) => {
       return;
     }
     // req.session.user_id = dbUserData.user.dataValues.id;
-    console.log(dbUserData.user)
+    
             res.json({user: dbUserData});
             
           });
