@@ -108,8 +108,9 @@ router.post('/signup', (req, res) => {
       res.status(400).json({ message: 'Incorrect password!' });
       return;
     }
-    // req.session.user_id = dbUserData.user.dataValues.id;
-    
+     req.session.user = dbUserData
+    // const test = ([dbUserData]).map(x => x)
+    // console.log(JSON.stringify(dbUserData).split('id:').split(" ")[1]);
             res.json({user: dbUserData});
             
           });
