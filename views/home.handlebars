@@ -1,25 +1,11 @@
-<div class="col-3">
-    <section id="sidebar">
+<div class="col-12">
+    <div class="card-columns">
 
-        {{#if posts.length}}
-        <h4>Travel to the stars, Read!</h4>
-        <ol>
-            {{#each posts as |post|}}
-            <li>
-                <a href="/dashboard/post/{{post.id}}" class="sidebar-link">{{post.title}}</a>
-            </li>
-            {{/each}}
-        </ol>
-        {{/if}}
-
-    </section>
-</div>
-<div class="col-9">
-    <ol>
         {{#each posts as |post|}}
-        <li class="list-group-item">
+        <div class="card">
             {{> post-info post}}
-        </li>
+        </div>
         {{/each}}
-    </ol>
+        
+    </div>
 </div>

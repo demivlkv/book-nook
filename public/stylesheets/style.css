@@ -152,7 +152,7 @@ h5.modal-title {
 /* DASHBOARD */
 
 .container-fluid {
-    width: 95%;
+    width: 75%;
     margin: 20px auto;
 }
 
@@ -185,86 +185,38 @@ nav ul li {
     cursor: pointer;
 }
 
-section#sidebar {
-    padding: 15px;
-}
-
-section.add-post {
-    text-align: center;
-}
-
-section.add-post a, section.add-post a:visited {
-    padding: 12px 15px;
-    color: var(--fourth) !important;
-    border: 2px solid var(--fourth);
-    border-radius: 3px;
-}
-    
-section.add-post a:hover {
-    color: var(--third) !important;
-    border: 2px solid var(--third);
-}
-
-article.post {
-    margin-bottom: 15px;
-    padding: 15px;
-    background-color: var(--sixth);
-    border-radius: 5px;
-}
-
-article div.title {
+div.title {
     font-family: 'Poppins', Helvetica, sans-serif;
     font-size: 2em;
     font-weight: 400;
 }
 
+.card {
+    display: inline-block;
+    margin: 0 0.5em;
+    width: calc(100%/3);
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 3px;
+}
+
+.card-body {
+    background-color: var(--fifth);
+    border: none;
+    border-radius: 3px;
+}
+
+.card-footer {
+    border-top: 0px;
+}
+
+section#sidebar {
+    padding: 15px;
+}
+
 .meta {
     color: #777;
     font-size: 0.9em;
-}
-
-ol {
-    list-style: none;
-    margin-block-start: 0 !important;
-    margin-block-end: 0 !important;
-    padding-inline-start: 0 !important;
-}
-
-li.list-group-item {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0 !important;
-    background-color: transparent;
-    border: 0 !important;
-}
-
-li.list-group-item:last-child {
-    margin: 0;
-    padding: 0 !important;
-    background-color: transparent;
-    border: 0 !important;
-}
-
-.sidebar-link {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 15px auto;
-    padding: 12px;
-    border-radius: 3px;
-    background-color: var(--third);
-    color: var(--fifth) !important;
-}
-
-.sidebar-link:hover  {
-    background-color: var(--first);
-    cursor: pointer;
-}
-
-.sidebar-link span {
-    color: var(--fifth);
 }
 
 /* COMMENTS */
@@ -274,6 +226,13 @@ section.comment {
     padding: 15px;
     background-color: #f3f3f3;
     border-radius: 5px;
+}
+
+.comment-text {
+    margin-top: 15px;
+    font-family: 'Karla', Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 1.8em;
 }
 
 form.comment-form {

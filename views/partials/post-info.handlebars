@@ -1,17 +1,15 @@
-        <article class="post">
-            <div class="title">
-                <a href="/dashboard/post/{{id}}">{{title}}</a>
-            </div>
+<div class="card-body">
 
-                <div id="thumbnail"></div>
+    <div class="title"><a href="/dashboard/post/{{id}}">{{title}}</a></div>
 
-                <p><strong>Author:</strong> {{author}}<br />
-                <strong>Genre:</strong> {{genre}}<br />
-                <strong>Lexile Level:</strong> {{lexile_level}}</p>
-                
-                <p>{{post_text}}</p>
+    <p><strong>Author:</strong> {{author}}<br />
+    <strong>Genre:</strong> {{genre}}<br />
+    <strong>Lexile Level:</strong> {{lexile_level}}</p>
 
-            <div class="meta">
-                <i class="fa-solid fa-star"></i> <a href="/dashboard/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-            </div>
-        </article>
+    <p class="card-text">{{post_text}}</p>
+
+    <div class="card-footer">
+        <small class="text-muted"><i class="fa-solid fa-star"></i> <a href="/dashboard/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a></small>
+    </div>
+
+</div>
