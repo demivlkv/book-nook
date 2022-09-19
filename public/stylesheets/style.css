@@ -135,11 +135,18 @@ form {
     background-color: var(--first);
 }
 
-.err-msg {
-    padding: 10px 15px;
-    margin-bottom: 15px;
-    color: #b53c3c;
-    font-weight: bold;
+/* MODAL */
+
+h5.modal-title {
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-weight: 400;
+    color: var(--first);
+}
+
+.modal-content {
+    font-family: 'Karla', Helvetica, sans-serif;
+    font-weight: 400;
+    color: var(--second);
 }
 
 /* DASHBOARD */

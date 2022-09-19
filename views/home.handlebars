@@ -1,6 +1,7 @@
 <div class="col-3">
     <section id="sidebar">
 
+        {{#if posts.length}}
         <h4>Travel to the stars, Read!</h4>
         <ol>
             {{#each posts as |post|}}
@@ -9,6 +10,7 @@
             </li>
             {{/each}}
         </ol>
+        {{/if}}
 
     </section>
 </div>

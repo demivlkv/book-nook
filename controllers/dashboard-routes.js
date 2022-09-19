@@ -24,9 +24,7 @@ router.get('/', withAuth, (req, res) => {
     })
     .then(dbPostData => {
         // serialize data before passing to template
-        console.log(dbPostData);
         const posts = dbPostData.map(post => post.get({ plain: true }));
-        console.log(posts);
         res.render('home', { posts, layout: 'dashboard', loggedIn: true });
     })
     .catch(err => {
@@ -72,6 +70,5 @@ router.get('/post/:id', withAuth, (req, res) => {
         res.status(500).json(err);
     });
 });
-
 
 module.exports = router;
