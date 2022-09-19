@@ -40,6 +40,7 @@ h4 {
     font-family: 'Poppins', Helvetica, sans-serif;
     font-weight: 400;
     color: var(--first);
+    text-shadow: 0 0 8px rgba(200, 200, 200, 0.5);
 }
 
 span {
@@ -48,6 +49,10 @@ span {
 
 p {
     font-family: 'Karla', Helvetica, sans-serif;
+}
+
+strong {
+    color: var(--first);
 }
 
 a, a:visited {
@@ -130,6 +135,13 @@ form {
     background-color: var(--first);
 }
 
+.err-msg {
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    color: #b53c3c;
+    font-weight: bold;
+}
+
 /* DASHBOARD */
 
 .container-fluid {
@@ -145,6 +157,7 @@ nav ul {
     list-style: none;
     margin-block-start: 0 !important;
     padding-inline-start: 0 !important;
+    text-shadow: 0 0 8px rgba(200, 200, 200, 0.5);
 }
 
 nav ul li {
@@ -226,7 +239,7 @@ li.list-group-item:last-child {
     border: 0 !important;
 }
 
-.edit-link {
+.sidebar-link {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -238,12 +251,12 @@ li.list-group-item:last-child {
     color: var(--fifth) !important;
 }
 
-.edit-link:hover  {
+.sidebar-link:hover  {
     background-color: var(--first);
     cursor: pointer;
 }
 
-.edit-link span {
+.sidebar-link span {
     color: var(--fifth);
 }
 

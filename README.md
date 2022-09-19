@@ -1,8 +1,5 @@
 # Book Nook
-
-# REMEMBER!!!!!
-
-### Always `git pull origin develop` before working on your branch!!!
+![Book Nook - Travel to the stars, Read!](/../main/public/images/booknook-readme-banner.png)
 
 ## Description
 
@@ -12,9 +9,10 @@
 - [Tests](#tests)
 - [License](#license)
 - [Contributors](#contributors)
+- [Technologies Used](#technologies-used)
 
 ## Contributors
-Boris Habimana - [Borishabimana773](https://github.com/Borishabimana773)<br />
-Demi Hayashi - [demivlkv](https://github.com/demivlkv)<br />
-Sam Karpovck - [samkarp700](https://github.com/samkarp700)<br />
-Mary Paul - [marymc13](https://github.com/marymc13)
+[Demi Hayashi](https://github.com/demivlkv): Project Lead, Front end<br />
+[Sam Karpovck](https://github.com/samkarp700): Back end<br />
+[Mary Paul](https://github.com/marymc13): Back end<br />
+[Boris Habimana](https://github.com/Borishabimana773): Back end

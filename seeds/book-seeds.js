@@ -149,7 +149,7 @@ const postData = [
     lexile_level: 770,
     genre: "Realistic Fiction",
     post_text: "Willow Chance is a 12-year-old genius, obsessed with nature and diagnosing medical conditions, who finds it comforting to count by 7s. It has never been easy for her to connect with anyone other than her adoptive parents, but that hasn't kept her from leading a quietly happy life, until now. Suddenly Willow's world is tragically changed when her parents both die in a car crash, leaving her alone in a baffling world. The triumph of this book is that it is not a tragedy. This extraordinarily odd but extraordinarily endearing girl manages to push through her grief. Her journey to find a fascinatingly diverse and fully believable surrogate family is a joy and a revelation to read."
-},
+}
 ];
 
 const seedBooks = () => Post.bulkCreate(postData);
