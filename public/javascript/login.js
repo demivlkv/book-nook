@@ -4,8 +4,7 @@ async function loginFormHandler(event) {
 
     const username = document.getElementById('username-login').value.trim();
     const password = document.getElementById('password-login').value.trim();
-    console.log(username, password)
-    
+        
     if (username && password) {
         const response = await fetch('/api/users/login', {
             method: 'POST',
@@ -13,15 +12,17 @@ async function loginFormHandler(event) {
                 username,
                 password
             }),
-            headers: { 'Content-Type': 'application/json' }
-            
+            headers: {
+                'Content-Type': 'application/json'
+            }
         });
 
         // check response status
         if (response.ok) {
             document.location.replace('/dashboard');
         } else {
-            alert(response.statusText);
+            $('#modal').modal('show');
+            $('.modal-body').html(response.statusText);
         }
     }
 };
