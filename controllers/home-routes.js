@@ -1,10 +1,7 @@
 const router = require('express').Router();
-const { Post, User, Comment } = require('../models');
 
 // render homepage template
 router.get('/', (req, res) => {
-    console.log(req.session);
-
     res.render('index');
 });
 

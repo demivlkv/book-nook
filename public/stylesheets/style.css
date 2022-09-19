@@ -51,6 +51,10 @@ p {
     font-family: 'Karla', Helvetica, sans-serif;
 }
 
+strong {
+    color: var(--first);
+}
+
 a, a:visited {
     color: var(--fourth);
     text-decoration: none;
@@ -129,6 +133,13 @@ form {
 
 .btn#login:hover, .btn#signup:hover {
     background-color: var(--first);
+}
+
+.err-msg {
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    color: #b53c3c;
+    font-weight: bold;
 }
 
 /* DASHBOARD */
@@ -228,7 +239,7 @@ li.list-group-item:last-child {
     border: 0 !important;
 }
 
-.edit-link {
+.sidebar-link {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -240,12 +251,12 @@ li.list-group-item:last-child {
     color: var(--fifth) !important;
 }
 
-.edit-link:hover  {
+.sidebar-link:hover  {
     background-color: var(--first);
     cursor: pointer;
 }
 
-.edit-link span {
+.sidebar-link span {
     color: var(--fifth);
 }
 

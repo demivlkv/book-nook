@@ -1,6 +1,4 @@
 // user login form
-console.log('hello');
-// user login form
 async function loginFormHandler(event) {
     event.preventDefault();
 
