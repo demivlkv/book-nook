@@ -1,12 +1,14 @@
 <div class="col-3">
     <section id="sidebar">
 
+        <p><a href="/dashboard"><i class="fa-solid fa-arrow-left-long"></i> Back to Dashboard</a></p>
+
         {{#if posts.length}}
-        <h2>View By Genre</h2>
+        <h4>Travel to the stars, Read!</h4>
         <ol>
             {{#each posts as |post|}}
             <li>
-                <a href="/dashboard/edit/{{post.id}}" class="edit-link">{{post.title}} <span>{{format_date post.created_at}}</span></a>
+                <a href="/dashboard/post/{{post.id}}" class="sidebar-link">{{post.title}}</a>
             </li>
             {{/each}}
         </ol>
