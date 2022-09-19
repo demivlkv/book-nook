@@ -40,6 +40,7 @@ h4 {
     font-family: 'Poppins', Helvetica, sans-serif;
     font-weight: 400;
     color: var(--first);
+    text-shadow: 0 0 8px rgba(200, 200, 200, 0.5);
 }
 
 span {
@@ -145,6 +146,7 @@ nav ul {
     list-style: none;
     margin-block-start: 0 !important;
     padding-inline-start: 0 !important;
+    text-shadow: 0 0 8px rgba(200, 200, 200, 0.5);
 }
 
 nav ul li {
