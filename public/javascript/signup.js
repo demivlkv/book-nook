@@ -6,6 +6,7 @@ async function signupFormHandler(event) {
     const password = document.getElementById('password-signup').value.trim();
 
     if (username && password) {
+        
         const response = await fetch('/api/users/signup', {
             method: 'POST',
             body: JSON.stringify({
@@ -17,7 +18,7 @@ async function signupFormHandler(event) {
 
         // check response status
         if (response.ok) {
-            document.location.replace('/dashboard');
+            window.location.assign('/dashboard');
         } else {
             $('#modal').modal('show');
             $('.modal-body').html(response.statusText);
