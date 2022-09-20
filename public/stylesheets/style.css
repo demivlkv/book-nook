@@ -36,13 +36,6 @@ h2 {
     color: var(--first);
 }
 
-h4 {
-    font-family: 'Poppins', Helvetica, sans-serif;
-    font-weight: 400;
-    color: var(--first);
-    text-shadow: 0 0 8px rgba(200, 200, 200, 0.5);
-}
-
 span {
     color: var(--third);
 }
@@ -131,6 +124,7 @@ form {
 
 .btn#login, .btn#signup {
     margin-bottom: 15px;
+    padding: 10px 15px;
     background-color: var(--third);
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -183,28 +177,17 @@ header nav ul {
     padding-inline-start: 0 !important;
 }
 
-header nav ul li a {
-    padding: 10px 15px;
-    color: var(--first) !important;
-    font-size: 1vw;
-}
-
-header nav ul li a:hover {
-    background-color: rgba(3, 206, 164, 0.6);
-    color: var(--fifth) !important;
-    border-radius: 3px;
-}
-
-.btn-no-style {
-    padding: 10px 15px;
+.nav-link {
+    padding: 7px 12px;
     background: transparent;
     color: var(--first);
     font-size: 1vw;
     border: 0;
     border-radius: 3px;
+    transition: all .15s ease-in-out;
 }
 
-.btn-no-style:hover {
+.nav-link:hover {
     background-color: rgba(3, 206, 164, 0.6);
     color: var(--fifth);
     cursor: pointer;
@@ -235,12 +218,8 @@ div.title {
     border-top: 0px;
 }
 
-section#sidebar {
-    padding: 15px;
-}
-
 .meta {
-    color: #777;
+    color: #999;
     font-size: 0.9em;
 }
 

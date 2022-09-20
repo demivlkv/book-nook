@@ -1,18 +1,7 @@
 <div class="col-3">
     <section id="sidebar">
 
-        <p><a href="/dashboard"><i class="fa-solid fa-arrow-left-long"></i> Back to Dashboard</a></p>
-
-        {{#if posts.length}}
-        <h4>Travel to the stars, Read!</h4>
-        <ol>
-            {{#each posts as |post|}}
-            <li>
-                <a href="/dashboard/post/{{post.id}}" class="sidebar-link">{{post.title}}</a>
-            </li>
-            {{/each}}
-        </ol>
-        {{/if}}
+        <p class="text-center"><a href="/dashboard" class="nav-link"><i class="fa-solid fa-arrow-left-long"></i> Back to Dashboard</a></p>
 
     </section>
 
