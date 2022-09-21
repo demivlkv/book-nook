@@ -2,7 +2,10 @@
 ![Book Nook - Travel to the stars, Read!](/../main/public/images/booknook-readme-banner.png)
 
 ## Description
-This application is designed to provide a platform and community for parents and/or teachers of young readers. This platform is designed to allow parents to discover and discuss new reads for their child based on the individual reading level and interest. The main features of the application include account registration, access to database of books, and post comments reviewing the existing books. 
+This application is designed to provide a platform and community for parents and/or teachers of young readers. This platform is designed to allow parents to discover and discuss new reads for their child based on the individual reading level and interest. The main features of the application include account registration, access to database of books, and post comments reviewing the existing books.
+
+### Link to Deployed Application:
+[https://booknook-stars.herokuapp.com/](https://booknook-stars.herokuapp.com/)
 
 ## Table of Contents
 - [User Story](#user-story)
