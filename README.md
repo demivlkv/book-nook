@@ -49,13 +49,13 @@ THEN I am able to view posts and comments but I am prompted to log in again befo
 1. To install this application, `git clone` this repository, or download the `.zip` file in the dropdown after clicking the green ‘Code’ button at the top of this repository—as long as it is in your local branch.
 2. Ensure Node.js is installed in your operating system.
 3. Install ***all*** of the dependencies listed in the [technologies used](#technologies-used) via command-line in terminal.
-3. Initialize MySQL by running `mysql -u root -p`, and enter your password when prompted. Once loaded, enter `SOURCE db/schema.sql;` to create the database. Exit MySQL by entering `quit;` in terminal.
-4. Run `npm run seed` to seed the database.
-5. The application can be accessed by visiting `http://localhost:3001` in the browser after running the following command:
+4. Initialize MySQL by running `mysql -u root -p`, and enter your password when prompted. Once loaded, enter `SOURCE db/schema.sql;` to create the database. Exit MySQL by entering `quit;` in terminal.
+5. Run `npm run seed` to seed the database.
+6. The application can be accessed by visiting `http://localhost:3001` in the browser after running the following command:
 ```
 npm start
 ```
-6. [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) can be used to check the backend functionality.
+7. [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) can be used to check the backend functionality.
 
 ## Usage
 Feel free to use the `guest` account with these credentials to explore the functionality of this web application:
