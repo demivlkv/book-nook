@@ -7,7 +7,7 @@ This application is designed to provide a platform and community for parents and
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Tests](#tests)
+- [Screenshots](#screenshots)
 - [Technologies Used](#technologies-used)
 - [Contributors](#contributors)
 
@@ -22,6 +22,26 @@ This application is designed to provide a platform and community for parents and
 npm start
 ```
 6. [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) can be used to check the backend functionality.
+
+## Usage
+Feel free to use the `guest` account with these credentials to explore the functionality of this web application:
+
+> **Username:** guest **Password:** password1234
+
+An unregistered user will be able to navigate to the main index page, and will presented with the `Get Started` button. Clicking this button will lead the user to a sign up page, and a link to be able to log in to their account.
+
+A registered user will have access to the `dashboard`, where they could comment on posts. The user will be able to do so by clicking on a book title or the comments link beneath each book summaries. A `logout` button will be displayed in the top right corner upon login.
+
+The user's session will automatically expire after 30 minutes of idle activity.
+
+## Screenshots
+![Book Nook - index page](/../main/public/images/screenshot-index.png)
+
+![Book Nook - sign up page](/../main/public/images/screenshot-signup.png)
+
+![Book Nook - dashboard view](/../main/public/images/screenshot-dashboard.png)
+
+![Book Nook - single post view](/../main/public/images/screenshot-post.png)
 
 ## Technologies Used
 - HTML
