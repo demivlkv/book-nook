@@ -46,7 +46,7 @@ THEN I am able to view posts and comments but I am prompted to log in again befo
 ```
 
 ## Installation
-1. To install this application, `git clone` this repository, or download the `.zip` file in the dropdown after clicking the green ‘Code’ button at the top of this repository—as long as it is in your local branch.
+1. To install this application, `git clone` this repository, or download the `.zip` file in the dropdown after clicking the ‘Code’ button at the top of this repository—as long as it is in your local branch.
 2. Ensure Node.js is installed in your operating system.
 3. Install ***all*** of the dependencies listed in the [technologies used](#technologies-used) via command-line in terminal.
 4. Initialize MySQL by running `mysql -u root -p`, and enter your password when prompted. Once loaded, enter `SOURCE db/schema.sql;` to create the database. Exit MySQL by entering `quit;` in terminal.
